@@ -58,3 +58,6 @@ network={
 }
 ```
   
+  Update the /etc/nixos/configuration to your flavor and then ```nixos-rebuild switch```. I have included a sample configuration in this repository.
+  
+NOTE: The user created from the configuration file doesn't assign any password to the user. You would need to do that as root once the rebuild is complete before you reboot.
