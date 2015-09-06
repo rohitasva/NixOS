@@ -24,7 +24,18 @@ This repo has steps that I had to take to install nixos-15.09 on a separtate par
 2. Use fdisk to create partitions for NixOS. For me I created /dev/sda4 (nixos home) and /dev/sda5 (nixos swap)
 3. Once the partitions are created use the following commands:
 ```
-    
+  $ mkfs.ext4 -L nixosroot /dev/sda4
+  $ mkswap -L nixosswap /dev/sda5
+  $ mkfs.vfat /dev/sda1
+  $ mount /dev/sda4 /mnt
+  $ mkdir /mnt/boot
+  $ mount /dev/sda1 /mnt/boot 
 ```
 
+## Create nix configuration file and install the operating system
+  ```
+  $ nixos-generate-config --root /mnt
+  $ nixos-install
+  ```
+  to install the operating system.
 
