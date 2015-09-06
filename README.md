@@ -32,7 +32,7 @@ This repo has steps that I had to take to install nixos-15.09 on a separtate par
   $ mount /dev/sda1 /mnt/boot 
 ```
 
-## Create nix configuration file 
+## Create nix configuration file and install the operating system.
   ```
   $ nixos-generate-config --root /mnt
   ``` 
