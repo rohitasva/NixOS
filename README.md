@@ -1,6 +1,6 @@
 ## NixOS on Macbook Air
 
-This repo has steps that I had to take to install nixos-15.09 on a separtate partition on macbook air.
+This repo has steps that I had to follow to install nixos-15.09 on a separtate partition on macbook air. I had help from https://github.com/mbbx6spp/mbp-nixos which was written for nixos-14.12. I could skip couple of steps with the OS version.
 
 ## Prerequisites
 1. Hard wired ethernet connection. This is required for the first nixos-install. After that we can set up wireless connection.
