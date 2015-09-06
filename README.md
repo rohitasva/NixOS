@@ -47,4 +47,14 @@ This repo has steps that I had to take to install nixos-15.09 on a separtate par
   ```
   Then run ```$ nixos-install```to install the operating system. You can exclude installing git. I did it to get 
   my configuration for later.
+  Once the installation is complete, you should be able to reboot into NixOS directly
 
+## Getting wireless to work 
+  Update the /etc/wpa_supplicant.conf as follows and restart wpa_supplicant.service. You should have intenet connectivity after this.
+```
+network={
+  ssid="<Network ID>"
+  psk="password"
+}
+```
+  
