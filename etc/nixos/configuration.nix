@@ -32,18 +32,14 @@
   # Set your time zone.
   # time.timeZone = "Europe/Amsterdam";
 
-  # List packages installed in system profile. To search by name, run:
+  # List packages installed in system profile. 
   environment.systemPackages = with pkgs; [
-    wget vim git zsh nix-prefetch-scripts
+    wget vim git zsh nix-prefetch-scripts firefox
   ];
 
-  # List services that you want to enable:
-
+  # List services that you want to enable
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
 
   # Enable the X11 windowing system and KDE Desktop Environment.
   services.xserver = {
