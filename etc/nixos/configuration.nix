@@ -12,7 +12,9 @@
 
   # Use the gummiboot efi boot loader.
   boot.loader.gummiboot.enable = true;
+  boot.loader.gummiboot.timeout = 10;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.cleanTmpDir = true;
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.packageOverrides = pkgs: {
@@ -22,24 +24,21 @@
   networking.hostName = "nixos"; # Define your hostname.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Select internationalisation properties.
-  # i18n = {
-  #   consoleFont = "Lat2-Terminus16";
-  #   consoleKeyMap = "us";
-  #   defaultLocale = "en_US.UTF-8";
-  # };
-
   # Set your time zone.
-  # time.timeZone = "Europe/Amsterdam";
+  time.timeZone = "America/LosAngeles";
 
-  # List packages installed in system profile. 
+  # List packages installed in system profile. To search by name, run:
   environment.systemPackages = with pkgs; [
-    wget vim git zsh nix-prefetch-scripts firefox
+    wget vim zsh git nix-prefetch-scripts firefox
   ];
 
-  # List services that you want to enable
+  # List services that you want to enable:
+
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+
+  # Enable CUPS to print documents.
+  # services.printing.enable = true;
 
   # Enable the X11 windowing system and KDE Desktop Environment.
   services.xserver = {
@@ -50,7 +49,7 @@
     displayManager.kdm = {
       enable = true;
     };
-    desktopManager.kde5.enable = true; #you can use kde4 also
+    desktopManager.kde5.enable = true; #If you want you can use kde4 also
     videoDrivers = [ "intel" "nouveau" ];
   
     # Configure touchpad
@@ -61,6 +60,8 @@
       accelFactor = "0.0001";
       buttonsMap = [ 1 3 2 ];
     };
+    multitouch.enable = true;
+    multitouch.invertScroll = true;
   };
   
 
@@ -77,4 +78,5 @@
 
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "15.09";
+
 }
