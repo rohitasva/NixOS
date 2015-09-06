@@ -8,16 +8,16 @@ This repo has steps that I had to take to install nixos-15.09 on a separtate par
 
 ## Prepare Installation Media (USB stick)
 1. Execute the command 
-  ```shell
+  ```
   sudo dd bs=1m if=<location of the iso> of=/dev/diskX 
   ```
   from the terminal. DiskX is the location where the USB is mounted (it can be found using command 
-  ```shell
+  ```
   diskutil list
   ```
   ) This step might take some time to complete. 
 
 
 ## Booting using the USB and creating new partitions for NixOS
-1. Hold down <opti>
+1. Hold down alt key while booting and select the USB to boot from. If all is good, you should be able to login as root. (Note: There is no password for root)
 
