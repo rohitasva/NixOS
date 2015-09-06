@@ -29,7 +29,7 @@
 
   # List packages installed in system profile. To search by name, run:
   environment.systemPackages = with pkgs; [
-    wget vim zsh git nix-prefetch-scripts firefox
+    wget vim zsh git nix-prefetch-scripts firefox openvpn vpnc
   ];
 
   # List services that you want to enable:
