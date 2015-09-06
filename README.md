@@ -3,8 +3,9 @@
 This repo has steps that I had to take to install nixos-15.09 on a separtate partition on macbook pro.
 
 ## Prerequisites
-1. Decrease the partition size of the OSX using disk utility and format the extra space as free for NixOS to be installed
-2. Download the iso from https://nixos.org/releases/nixos/15.09/nixos-15.09.189.a30ecea. We are going to use the minimal image.
+1. Hard wired ethernet connection. This is required for the first nixos-install. After that we can set up wireless connection.
+2. Resize OSX partition to allocate enough space for NixOS using disk utility. Format the extra space as free for NixOS to be installed
+3. Download the iso from https://nixos.org/releases/nixos/15.09/nixos-15.09.189.a30ecea. We are going to use the minimal image.
 
 ## Prepare Installation Media (USB stick)
 1. Execute the command 
@@ -20,4 +21,10 @@ This repo has steps that I had to take to install nixos-15.09 on a separtate par
 
 ## Booting using the USB and creating new partitions for NixOS
 1. Hold down alt key while booting and select the USB to boot from. If all is good, you should be able to login as root. (Note: There is no password for root)
+2. Use fdisk to create partitions for NixOS. For me I created /dev/sda4 (nixos home) and /dev/sda5 (nixos swap)
+3. Once the partitions are created use the following commands:
+```
+    
+```
+
 
