@@ -32,10 +32,15 @@ This repo has steps that I had to take to install nixos-15.09 on a separtate par
   $ mount /dev/sda1 /mnt/boot 
 ```
 
-## Create nix configuration file and install the operating system
+## Create nix configuration file 
   ```
   $ nixos-generate-config --root /mnt
-  $ nixos-install
+  ``` 
+  Update the /mnt/etc/nixos/configuration.nix to include
   ```
+    nixpkgs.config.allowUnfree = true;
+    networking.wireless.enable = true;
+  ```
+  Then run ```$ nixos-install```
   to install the operating system.
 
