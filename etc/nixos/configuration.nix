@@ -33,9 +33,8 @@
   # time.timeZone = "Europe/Amsterdam";
 
   # List packages installed in system profile. To search by name, run:
-  # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
-    wget vim zsh nix-prefetch-scripts
+    wget vim git zsh nix-prefetch-scripts
   ];
 
   # List services that you want to enable:
@@ -46,9 +45,7 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
-  # Enable the X11 windowing system.
-
-  # Enable the KDE Desktop Environment.
+  # Enable the X11 windowing system and KDE Desktop Environment.
   services.xserver = {
     enable = true;
     layout = "us";
@@ -57,7 +54,7 @@
     displayManager.kdm = {
       enable = true;
     };
-    desktopManager.kde4.enable = true;
+    desktopManager.kde5.enable = true; #you can use kde4 also
     videoDrivers = [ "intel" "nouveau" ];
   
     # Configure touchpad
@@ -84,5 +81,4 @@
 
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "15.09";
-
 }
