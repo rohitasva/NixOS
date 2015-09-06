@@ -1,6 +1,6 @@
-## NixOS on Macbook Pro
+## NixOS on Macbook Air
 
-This repo has steps that I had to take to install nixos-15.09 on a separtate partition on macbook pro.
+This repo has steps that I had to take to install nixos-15.09 on a separtate partition on macbook air.
 
 ## Prerequisites
 1. Hard wired ethernet connection. This is required for the first nixos-install. After that we can set up wireless connection.
