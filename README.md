@@ -40,7 +40,11 @@ This repo has steps that I had to take to install nixos-15.09 on a separtate par
   ```
     nixpkgs.config.allowUnfree = true;
     networking.wireless.enable = true;
+    
+    environment.systemPackages = with pkgs; [
+      git
+    ];
   ```
-  Then run ```$ nixos-install```
-  to install the operating system.
+  Then run ```$ nixos-install```to install the operating system. You can exclude installing git. I did it to get 
+  my configuration for later.
 
