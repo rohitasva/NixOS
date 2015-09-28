@@ -4,7 +4,7 @@ This repo has steps that one can follow to install nixos-15.09 as dual boot on m
 ## Prerequisites
 1. Hard wired ethernet connection. This is required for the first nixos-install. After that we can set up wireless connection.
 2. Resize OSX partition to allocate enough space for NixOS using disk utility. Format the extra space as free for NixOS to be installed
-3. Download the iso from https://nixos.org/releases/nixos/15.09/nixos-15.09.189.a30ecea. We are going to use the minimal image.
+3. Download the iso from https://nixos.org/releases/nixos/15.09/. We are going to use the minimal image.
 
 ## Prepare Installation Media (USB stick)
 1. Execute  ```sudo dd bs=1m if=<location of the iso> of=/dev/diskX ``` from the terminal. DiskX is the location where the USB is mounted (it can be found using command ```diskutil list```) This step might take some time to complete. 
