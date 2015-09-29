@@ -7,7 +7,8 @@ This repo has steps that one can follow to install nixos-15.09 as dual boot on m
 3. Download the iso from https://nixos.org/releases/nixos/15.09/. We are going to use the minimal image.
 
 ## Prepare Installation Media (USB stick)
-1. Execute  ```sudo dd bs=1m if=<location of the iso> of=/dev/diskX ``` from the terminal. DiskX is the location where the USB is mounted (it can be found using command ```diskutil list```) This step might take some time to complete. 
+1. Unmount the USB stick using ```diskutil unmountDisk /dev/diskX```
+2. Execute  ```sudo dd bs=1m if=<location of the iso> of=/dev/diskX ``` from the terminal. DiskX is the location where the USB is mounted (it can be found using command ```diskutil list```) This step might take some time to complete. 
 
 
 ## Booting using the USB and creating new partitions for NixOS
